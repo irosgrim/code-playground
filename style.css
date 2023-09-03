@@ -1,0 +1,27 @@
+main {
+    display: flex;
+    width: 100%;
+}
+
+.editors {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.editors > div{
+    flex: 1;
+    border: 1px solid #ababab;
+}
+.editors > :not(:first-child) {
+    margin-top: 1rem;
+}
+.preview-wrapper {
+    flex: 1;
+}
+.preview-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+.resize-handle {
+    background-color: black;
+}
