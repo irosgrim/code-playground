@@ -10,23 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/nord.min.css"/>
 </head>
 <body>
-    <main>
+    <main id="main">
         <div class="editors" id="editors">
             <div>
-                <div>HTML</div>
+                <header>HTML</header>
                 <div id="html"></div>
             </div>
            <div>
-            <div>CSS</div>
+            <header>CSS</header>
              <div id="css"></div>
            </div>
            <div>
-            <div>JS</div>
+            <header>JS</header>
             <div id="js"></div>
            </div>
         </div>
-        <div id="resize" class="resize-handle">x</div>
-        <div class="preview-wrapper">
+        <div id="resizer" class="resize-handle">
+            <span id="preview-size" class="preview-size hidden"></span>
+        </div>
+        <div class="preview-wrapper" id="preview-wrapper">
             <iframe frameborder="1" id="preview">
             </iframe>
         </div>

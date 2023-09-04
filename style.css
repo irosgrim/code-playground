@@ -1,3 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    margin: 0;
+    padding: 0;
+}
 main {
     display: flex;
     width: 100%;
@@ -6,7 +15,8 @@ main {
 .editors {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    /* flex-grow: 1; */
+    width: 400px;
 }
 .editors > div{
     flex: 1;
@@ -15,13 +25,34 @@ main {
 .editors > :not(:first-child) {
     margin-top: 1rem;
 }
+
+.editors header {
+    background-color: rgba(80, 85, 92, 0.484);
+}
 .preview-wrapper {
-    flex: 1;
+    flex-grow: 1;
 }
 .preview-wrapper iframe {
     width: 100%;
     height: 100%;
 }
 .resize-handle {
-    background-color: black;
+    background-color: rgba(249, 136, 95, 0.498);
+    width: 10px;
+    position: relative;
+}
+.resize-handle:hover {
+    cursor: ew-resize;
+}
+
+.preview-size {
+    position: absolute;
+    z-index: 1;
+    background-color: red;
+    color: white;
+    left: 0.5rem;
+}
+
+.hidden {
+    visibility: hidden;
 }
